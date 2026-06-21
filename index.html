@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Engineering Placement Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-inner">
+        <p class="eyebrow">EdTech Lab · S1-002</p>
+        <h1>Find Your Level</h1>
+        <p class="subtitle">
+          AI Engineering from Scratch 커리큘럼 시작 Phase를 찾는 10문항 배치 퀴즈입니다.
+          직접 풀고 결과를 저장하세요.
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Welcome -->
+      <section id="screen-welcome" class="screen active">
+        <div class="card">
+          <h2>시작하기</h2>
+          <p>5개 영역 × 2문항 = 총 10문항. 영역별로 채점 후 다음 라운드로 진행합니다.</p>
+          <ul class="area-list">
+            <li>Math &amp; Statistics</li>
+            <li>Classical ML</li>
+            <li>Deep Learning</li>
+            <li>NLP &amp; Transformers</li>
+            <li>Applied AI</li>
+          </ul>
+          <div class="actions">
+            <button id="btn-start" class="btn btn-primary">퀴즈 시작</button>
+            <button id="btn-resume" class="btn btn-secondary hidden">이전 결과 보기</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quiz -->
+      <section id="screen-quiz" class="screen">
+        <div class="progress-bar" aria-hidden="true">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <p id="round-label" class="round-label"></p>
+        <div id="questions" class="questions"></div>
+        <div class="actions">
+          <button id="btn-prev" class="btn btn-secondary" disabled>이전</button>
+          <button id="btn-next" class="btn btn-primary">다음 라운드</button>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section id="screen-results" class="screen">
+        <div class="card results-card">
+          <h2>배치 결과</h2>
+          <p id="entry-point" class="entry-point"></p>
+
+          <div id="area-scores" class="area-scores"></div>
+
+          <h3>개인화 학습 경로</h3>
+          <div class="table-wrap">
+            <table id="path-table">
+              <thead>
+                <tr>
+                  <th>Phase</th>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Est. Hours</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p id="path-summary" class="path-summary"></p>
+          <p id="recommendation" class="recommendation"></p>
+
+          <details class="answers-details">
+            <summary>정답 해설 보기</summary>
+            <div id="answer-review"></div>
+          </details>
+
+          <div class="actions">
+            <button id="btn-copy" class="btn btn-secondary">결과 복사 (Markdown)</button>
+            <button id="btn-restart" class="btn btn-primary">다시 풀기</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Based on <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">ai-engineering-from-scratch</a> · <code>/find-your-level</code></p>
+      <button id="btn-theme" class="btn-icon" aria-label="다크모드 토글">◐</button>
+    </footer>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>
