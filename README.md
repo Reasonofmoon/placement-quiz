@@ -23,3 +23,7 @@ Open `http://localhost:8080` in your browser.
 Based on [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) `/find-your-level` skill.
 
 Part of EdTech Lab Stage 1 (S1-002).
+
+## Repository
+
+https://github.com/Reasonofmoon/placement-quiz
